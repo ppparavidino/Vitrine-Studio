@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vitrine Studio — Presença digital para empresas que fazem um trabalho sério</title>
+<meta name="description" content="A Vitrine Studio transforma sites antigos e redes sociais soltas em uma presença digital que passa confiança antes da primeira conversa. Escolas, clínicas, academias e pequenas empresas.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://vitrine.digital/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Vitrine Studio — Presença digital para empresas que fazem um trabalho sério">
+<meta property="og:description" content="Sites que fazem sua empresa parecer tão boa quanto ela realmente é.">
+<meta property="og:url" content="https://vitrine.digital/">
+<meta property="og:locale" content="pt_BR">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vitrine Studio — Presença digital para empresas que fazem um trabalho sério">
+<meta name="twitter:description" content="Sites que fazem sua empresa parecer tão boa quanto ela realmente é.">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Vitrine Studio",
+  "founder": { "@type": "Person", "name": "Pedro Paravidino" },
+  "description": "Agência especializada em modernização da presença digital de pequenas e médias empresas.",
+  "areaServed": "BR",
+  "serviceType": ["Sites institucionais", "Landing pages", "SEO", "Google Meu Negócio", "Hospedagem", "Manutenção", "Consultoria digital"]
+}
+</script>
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E0E13'/%3E%3Cpath d='M8 10h16M8 16h10M8 22h13' stroke='%234C3FE0' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --ink:#0E0E13;
+  --ink-soft:#3A3A42;
+  --paper:#FAFAF7;
+  --panel:#F1F0EA;
+  --panel-line:#E4E1D8;
+  --muted:#6B6B74;
+  --muted-on-dark:#9A98AE;
+  --line:#E4E2DC;
+  --line-on-dark:#28283A;
+  --accent:#4C3FE0;
+  --accent-2:#8A6DF1;
+  --accent-3:#33C9B8;
+  --accent-soft:#ECE9FB;
+  --dark-panel:#15151D;
+  --dark-panel-2:#1B1B26;
+  --radius-s:8px;
+  --radius-m:14px;
+  --radius-l:22px;
+  --shadow-card: 0 1px 2px rgba(14,14,19,.04), 0 12px 32px -16px rgba(14,14,19,.14);
+  --shadow-card-hover: 0 1px 2px rgba(14,14,19,.05), 0 24px 48px -18px rgba(14,14,19,.22);
+  --ease: cubic-bezier(.22,.61,.36,1);
+  --maxw: 1180px;
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *,*::before,*::after{animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important;}
+}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4{
+  font-family:'Bricolage Grotesque', 'Inter', sans-serif;
+  font-weight:700;
+  line-height:1.08;
+  letter-spacing:-0.02em;
+  margin:0;
+}
+p{margin:0;}
+img,svg{display:block; max-width:100%;}
+a{color:inherit; text-decoration:none;}
+button{font-family:inherit; cursor:pointer;}
+.mono{font-family:'JetBrains Mono', monospace;}
+::selection{background:var(--accent); color:#fff;}
+
+:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:4px;}
+
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+@media (max-width:640px){.wrap{padding:0 20px;}}
+
+.eyebrow{
+  display:inline-flex; align-items:center; gap:8px;
+  font-family:'JetBrains Mono', monospace;
+  font-size:12.5px; letter-spacing:.06em; text-transform:uppercase;
+  color:var(--accent); font-weight:500;
+}
+.eyebrow::before{content:''; width:14px; height:1px; background:var(--accent);}
+
+section{position:relative;}
+.section-pad{padding:120px 0;}
+@media (max-width:900px){.section-pad{padding:84px 0;}}
+
+/* ============ REVEAL ============ */
+.reveal{opacity:0; transform:translateY(22px); transition:opacity .8s var(--ease), transform .8s var(--ease);}
+.reveal.in{opacity:1; transform:translateY(0);}
+.reveal-stagger > * {transition-delay:calc(var(--i,0) * 70ms);}
+
+/* ============ BUTTONS ============ */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:9px;
+  padding:14px 26px; border-radius:999px; font-weight:600; font-size:15px;
+  border:1px solid transparent; transition:transform .35s var(--ease), box-shadow .35s var(--ease), background .35s var(--ease), border-color .35s var(--ease);
+  white-space:nowrap;
+}
+.btn-primary{background:var(--accent); color:#fff; box-shadow:0 10px 26px -10px rgba(76,63,224,.55);}
+.btn-primary:hover{transform:translateY(-2px); box-shadow:0 16px 32px -12px rgba(76,63,224,.6);}
+.btn-ghost-dark{border-color:rgba(255,255,255,.22); color:#fff;}
+.btn-ghost-dark:hover{border-color:rgba(255,255,255,.5); transform:translateY(-2px);}
+.btn-ghost-light{border-color:var(--line); color:var(--ink);}
+.btn-ghost-light:hover{border-color:var(--ink); transform:translateY(-2px);}
+.btn svg{width:16px; height:16px;}
+
+/* ============ HEADER ============ */
+header{
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  padding:20px 0;
+  transition:padding .4s var(--ease), background .4s var(--ease), border-color .4s var(--ease);
+  border-bottom:1px solid transparent;
+}
+header.scrolled{
+  padding:13px 0;
+  background:rgba(250,250,247,.78);
+  backdrop-filter:blur(14px) saturate(160%);
+  -webkit-backdrop-filter:blur(14px) saturate(160%);
+  border-bottom:1px solid var(--line);
+}
+.nav-row{display:flex; align-items:center; justify-content:space-between; gap:24px;}
+.logo{display:flex; align-items:center; gap:10px; font-family:'Bricolage Grotesque'; font-weight:700; font-size:19px; letter-spacing:-.01em;}
+.logo-mark{width:30px; height:30px; border-radius:8px; background:var(--ink); display:flex; align-items:center; justify-content:center; flex-shrink:0;}
+.logo-mark svg{width:16px; height:16px;}
+header.scrolled .logo-mark{background:var(--ink);}
+.nav-links{display:flex; align-items:center; gap:34px; list-style:none; margin:0; padding:0;}
+.nav-links a{font-size:14.5px; font-weight:500; color:var(--ink-soft); position:relative; padding:4px 0;}
+.nav-links a::after{content:''; position:absolute; left:0; right:0; bottom:0; height:1px; background:var(--ink); transform:scaleX(0); transform-origin:right; transition:transform .35s var(--ease);}
+.nav-links a:hover{color:var(--ink);}
+.nav-links a:hover::after{transform:scaleX(1); transform-origin:left;}
+.nav-cta{display:flex; align-items:center; gap:14px;}
+.nav-cta .btn{padding:11px 20px; font-size:14px;}
+.menu-toggle{display:none; width:38px; height:38px; border:1px solid var(--line); border-radius:9px; background:transparent; align-items:center; justify-content:center;}
+.menu-toggle svg{width:18px; height:18px;}
+
+@media (max-width:900px){
+  .nav-links{display:none;}
+  .nav-cta .btn-ghost-light{display:none;}
+  .menu-toggle{display:flex;}
+}
+
+.mobile-menu{
+  position:fixed; inset:0; z-index:99; background:var(--paper);
+  display:flex; flex-direction:column; padding:100px 28px 40px;
+  transform:translateY(-100%); transition:transform .5s var(--ease);
+}
+.mobile-menu.open{transform:translateY(0);}
+.mobile-menu a{font-family:'Bricolage Grotesque'; font-size:30px; font-weight:600; padding:14px 0; border-bottom:1px solid var(--line);}
+.mobile-menu .btn{margin-top:28px;}
+
+/* ============ HERO ============ */
+.hero{
+  background:var(--ink);
+  color:#fff;
+  padding:168px 0 100px;
+  position:relative;
+  overflow:hidden;
+}
+.hero-glow{
+  position:absolute; inset:-20% -10% auto -10%; height:900px;
+  background:
+    radial-gradient(560px 420px at 18% 20%, rgba(76,63,224,.5), transparent 70%),
+    radial-gradient(480px 380px at 82% 8%, rgba(51,201,184,.28), transparent 70%),
+    radial-gradient(700px 500px at 55% 60%, rgba(138,109,241,.22), transparent 70%);
+  filter:blur(10px);
+  pointer-events:none;
+  animation:drift 22s ease-in-out infinite alternate;
+}
+@keyframes drift{
+  0%{transform:translate3d(0,0,0) scale(1);}
+  100%{transform:translate3d(-2%,3%,0) scale(1.06);}
+}
+.hero-grid-lines{
+  position:absolute; inset:0; pointer-events:none; opacity:.35;
+  background-image:linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+  background-size:64px 64px;
+  mask-image:radial-gradient(ellipse 70% 60% at 50% 20%, black 40%, transparent 90%);
+}
+.hero-inner{position:relative; z-index:2; text-align:center; max-width:880px; margin:0 auto;}
+.hero .eyebrow{color:#C9C4FF; justify-content:center;}
+.hero .eyebrow::before{background:#C9C4FF;}
+.badge-founder{
+  display:inline-flex; align-items:center; gap:9px; margin-top:22px;
+  padding:8px 16px 8px 8px; border-radius:999px;
+  background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14);
+  backdrop-filter:blur(8px);
+  font-size:13.5px; color:#E7E5F5;
+}
+.badge-founder .dot{width:24px; height:24px; border-radius:50%; background:linear-gradient(135deg,var(--accent),var(--accent-3)); flex-shrink:0;}
+h1.hero-title{
+  font-size:clamp(38px, 6vw, 74px);
+  margin:26px 0 22px;
+  color:#fff;
+}
+h1.hero-title .grad{
+  background:linear-gradient(100deg, #B9AEFF, #7BE8DA 65%);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.hero-sub{font-size:clamp(16px,2vw,19px); color:#B8B6C9; max-width:600px; margin:0 auto; font-weight:400;}
+.hero-actions{display:flex; align-items:center; justify-content:center; gap:14px; margin-top:38px; flex-wrap:wrap;}
+
+/* ---- before/after signature ---- */
+.transform-wrap{margin-top:88px; position:relative; z-index:2;}
+.transform-card{
+  max-width:920px; margin:0 auto; position:relative;
+  border-radius:var(--radius-l);
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.03);
+  backdrop-filter:blur(6px);
+  padding:14px;
+}
+.ba-frame{
+  position:relative; border-radius:14px; overflow:hidden; aspect-ratio:16/9.4;
+  background:#fff; user-select:none;
+}
+.ba-layer{position:absolute; inset:0; overflow:hidden; display:flex; flex-direction:column;}
+.ba-chrome{height:32px; display:flex; align-items:center; gap:6px; padding:0 10px; border-bottom:1px solid #ddd; flex-shrink:0;}
+.ba-chrome span{width:8px; height:8px; border-radius:50%; background:#D0D0D0; flex-shrink:0;}
+.ba-url{flex:1; min-width:0; margin-left:8px;}
+.ba-url .addr{display:flex; align-items:center; gap:6px; font-size:9.5px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; padding:3px 10px;}
+.ba-url svg{width:10px; height:10px; flex-shrink:0;}
+
+/* ---- OLD (2010) mockup ---- */
+.ba-old{background:#ECE9DD;}
+.ba-old .ba-chrome{background:#D9D9D9; border-bottom:1px solid #B8B8B8;}
+.ba-old .ba-chrome span{background:#B0B0B0;}
+.ba-old .ba-url .addr{background:#fff; border:1px solid #A8A8A8; border-radius:2px; color:#4a4a4a; font-family:Arial,sans-serif;}
+.ba-old .ba-banner{background:linear-gradient(180deg,#4677CC,#1D3E85); padding:9px 14px; display:flex; align-items:center; justify-content:space-between; flex-shrink:0;}
+.ba-old .ba-banner .brand{font-family:Georgia,'Times New Roman',serif; color:#fff; font-size:16px; font-weight:700; text-shadow:1px 1px 0 rgba(0,0,0,.35);}
+.ba-old .ba-banner .brand small{display:block; font-family:Arial,sans-serif; font-weight:400; font-size:8.5px; color:#CFE0FF; text-shadow:none;}
+.ba-old .ba-banner .counter{background:#111; color:#3FE04A; font-family:'Courier New',monospace; font-size:8.5px; padding:4px 6px; border:1px solid #000; letter-spacing:.5px; flex-shrink:0;}
+.ba-old .ba-navbar{background:#16294D; display:flex; flex-shrink:0; overflow:hidden;}
+.ba-old .ba-navbar span{padding:6px 9px; font-size:9px; color:#fff; border-right:1px solid #2C4272; letter-spacing:.02em; font-family:Arial,sans-serif; white-space:nowrap;}
+.ba-old .ba-main{display:flex; flex:1; min-height:0;}
+.ba-old .ba-side{width:34%; background:#E1DCC7; border-right:1px solid #C9C2A5; padding:10px; flex-shrink:0; overflow:hidden;}
+.ba-old .ba-side h6{font-size:9px; color:#5A4E22; margin:0 0 6px; text-transform:uppercase; letter-spacing:.03em; border-bottom:1px solid #C9C2A5; padding-bottom:4px; font-family:Arial,sans-serif;}
+.ba-old .ba-side ul{list-style:none; margin:0 0 10px; padding:0;}
+.ba-old .ba-side li{margin-bottom:5px; font-size:9.5px; font-family:Arial,sans-serif;}
+.ba-old .ba-side a{color:#1D4ED8; text-decoration:underline;}
+.ba-old .ba-promo{background:#FFF6C9; border:1px dashed #D8B93A; padding:5px 6px; font-size:8.5px; color:#6B5A0E; display:flex; align-items:center; gap:5px; font-family:Arial,sans-serif;}
+.ba-old .ba-promo .blink{width:6px; height:6px; border-radius:50%; background:#E23B3B; animation:baBlink 1s step-end infinite; flex-shrink:0;}
+@keyframes baBlink{50%{opacity:0;}}
+.ba-old .ba-content{flex:1; padding:12px 14px; font-family:Georgia,'Times New Roman',serif; color:#3a3a2f; min-width:0; overflow:hidden;}
+.ba-old .ba-content h5{font-size:15px; color:#1D3E85; margin:0 0 3px; text-decoration:underline; font-weight:700;}
+.ba-old .updated{font-family:Arial,sans-serif; font-size:8px; color:#8A8A78; margin-bottom:8px; font-style:italic;}
+.ba-old .ba-lines span{display:block; height:6px; background:#D8D3BE; margin-bottom:6px; border-radius:1px;}
+.ba-old .ba-lines span:nth-child(2){width:92%;}
+.ba-old .ba-lines span:nth-child(3){width:78%;}
+.ba-old .ba-thumbs{display:flex; gap:5px; margin:10px 0;}
+.ba-old .ba-thumbs div{width:32px; height:26px; background:#C9C2A0; border:1px solid #A79F7A; flex-shrink:0;}
+.ba-old .ba-btn-old{display:inline-block; background:linear-gradient(180deg,#FFE27A,#D8A82B); border:1px solid #8A6A10; color:#43330A; font-size:9px; font-weight:700; padding:5px 11px; border-radius:3px; font-family:Arial,sans-serif; box-shadow:inset 0 1px 0 rgba(255,255,255,.6);}
+.ba-old .ba-foot{background:#D9D9D9; border-top:1px solid #B8B8B8; padding:5px 12px; font-size:7.5px; color:#666; font-family:Arial,sans-serif; flex-shrink:0;}
+
+/* ---- NEW (2026) mockup ---- */
+.ba-new{background:#fff;}
+.ba-new .ba-chrome{background:#F4F4F2;}
+.ba-new .ba-url .addr{background:#fff; border-radius:999px; color:#5B5A66; border:1px solid #E7E6EE;}
+.ba-new .ba-url svg{color:#1EAD6E;}
+.ba-new .ba-topnav{display:flex; align-items:center; justify-content:space-between; padding:13px 20px; flex-shrink:0;}
+.ba-new .ba-topnav .brand{display:flex; align-items:center; gap:7px; font-family:'Bricolage Grotesque'; font-weight:700; font-size:12.5px; color:var(--ink); flex-shrink:0;}
+.ba-new .ba-topnav .brand .mk{width:17px; height:17px; border-radius:5px; background:var(--ink); flex-shrink:0;}
+.ba-new .ba-topnav .links{display:flex; gap:14px;}
+.ba-new .ba-topnav .links span{font-size:10px; color:var(--ink-soft); font-weight:500; white-space:nowrap;}
+.ba-new .ba-topnav .cta{background:var(--ink); color:#fff; font-size:9.5px; font-weight:600; padding:7px 12px; border-radius:999px; white-space:nowrap; flex-shrink:0;}
+.ba-new .ba-hero{display:flex; align-items:center; gap:20px; padding:4px 20px 14px; flex:1; min-height:0;}
+.ba-new .ba-hero-text{flex:1.15; min-width:0;}
+.ba-new .ba-hero-text .tag{display:inline-block; font-family:'JetBrains Mono'; font-size:8.5px; color:var(--accent); background:var(--accent-soft); padding:3px 8px; border-radius:999px; margin-bottom:9px;}
+.ba-new .ba-hero-text h5{font-family:'Bricolage Grotesque'; font-size:17px; line-height:1.15; letter-spacing:-.02em; color:var(--ink); margin:0 0 8px;}
+.ba-new .ba-lines span{display:block; height:5px; background:#EFEEF7; margin-bottom:6px; border-radius:3px;}
+.ba-new .ba-lines span:nth-child(1){width:88%;}
+.ba-new .ba-lines span:nth-child(2){width:64%;}
+.ba-new .ba-btn-new{display:inline-flex; align-items:center; gap:6px; margin-top:12px; background:var(--accent); color:#fff; font-size:9.5px; padding:8px 13px; border-radius:999px; font-family:'Inter',sans-serif; font-weight:600;}
+.ba-new .ba-stats{display:flex; gap:14px; margin-top:13px;}
+.ba-new .ba-stats div{font-size:8px; color:var(--muted); display:flex; align-items:center; gap:4px; white-space:nowrap;}
+.ba-new .ba-stats b{font-family:'Bricolage Grotesque'; font-size:11.5px; color:var(--ink); font-weight:700;}
+.ba-new .ba-hero-visual{flex:1; align-self:stretch; border-radius:12px; background:linear-gradient(135deg,#EDEAFB,#F7E9EE 60%,#E7F4EF); position:relative; overflow:hidden; min-width:0;}
+.ba-new .ba-hero-visual::before{content:''; position:absolute; inset:0; background:radial-gradient(circle at 30% 25%, rgba(76,63,224,.28), transparent 55%), radial-gradient(circle at 75% 75%, rgba(51,201,184,.24), transparent 55%);}
+.ba-new .ba-floatcard{position:absolute; bottom:9px; left:9px; background:#fff; border-radius:9px; padding:6px 9px; box-shadow:0 8px 20px -8px rgba(0,0,0,.25); display:flex; align-items:center; gap:6px;}
+.ba-new .ba-floatcard .pulse{width:6px; height:6px; border-radius:50%; background:#22C55E; flex-shrink:0; animation:baPulse 1.6s ease-out infinite;}
+@keyframes baPulse{0%{box-shadow:0 0 0 0 rgba(34,197,94,.5);}70%{box-shadow:0 0 0 6px rgba(34,197,94,0);}100%{box-shadow:0 0 0 0 rgba(34,197,94,0);}}
+.ba-new .ba-floatcard span{font-size:8px; font-weight:600; color:var(--ink); white-space:nowrap;}
+.ba-new .ba-foot{padding:8px 20px; border-top:1px solid #F0EFEA; font-size:7.5px; color:var(--muted); flex-shrink:0;}
+
+.ba-old, .ba-new{position:absolute; inset:0;}
+.ba-divider{
+  position:absolute; top:0; bottom:0; width:2px; background:#fff; z-index:5;
+  box-shadow:0 0 0 1px rgba(0,0,0,.06);
+  left:var(--split, 50%);
+  pointer-events:none;
+}
+.ba-handle{
+  position:absolute; top:50%; left:var(--split,50%); transform:translate(-50%,-50%);
+  width:38px; height:38px; border-radius:50%; background:#fff; z-index:6;
+  display:flex; align-items:center; justify-content:center; gap:2px;
+  box-shadow:0 4px 14px rgba(0,0,0,.22); pointer-events:none;
+}
+.ba-handle svg{width:12px; height:12px;}
+.ba-range{position:absolute; inset:0; width:100%; height:100%; margin:0; opacity:0; cursor:ew-resize; z-index:7;}
+.ba-tag{position:absolute; top:12px; font-size:11px; font-weight:600; padding:5px 10px; border-radius:999px; font-family:'JetBrains Mono'; z-index:4; letter-spacing:.02em;}
+.ba-tag.old{left:12px; background:rgba(0,0,0,.55); color:#fff;}
+.ba-tag.new{right:12px; background:var(--accent); color:#fff;}
+.transform-caption{display:flex; align-items:center; justify-content:center; gap:8px; margin-top:16px; color:#8280A0; font-size:13px;}
+
+/* ---- before/after: mobile fixes ---- */
+@media (max-width:640px){
+  .transform-wrap{margin-top:52px;}
+  .transform-card{padding:8px; border-radius:16px;}
+  .ba-frame{aspect-ratio:auto; height:600px; border-radius:12px;}
+  .ba-tag{font-size:9px; padding:4px 8px;}
+  .ba-handle{width:32px; height:32px;}
+  .ba-handle svg{width:10px; height:10px;}
+  .transform-caption{font-size:12px; padding:0 12px; text-align:center;}
+
+  .ba-url .addr{font-size:8.5px;}
+
+  .ba-new .ba-topnav{padding:10px 14px;}
+  .ba-new .ba-topnav .links{display:none;}
+  .ba-new .ba-hero{flex-direction:column; align-items:stretch; gap:12px; padding:8px 14px 14px;}
+  .ba-new .ba-hero-text{flex:none;}
+  .ba-new .ba-hero-text h5{font-size:15px;}
+  .ba-new .ba-hero-visual{flex:none; height:100px;}
+  .ba-new .ba-stats{flex-wrap:wrap; row-gap:6px;}
+  .ba-new .ba-foot{padding:7px 14px;}
+
+  .ba-old .ba-banner{padding:8px 10px;}
+  .ba-old .ba-banner .brand{font-size:13px;}
+  .ba-old .ba-banner .counter{display:none;}
+  .ba-old .ba-navbar{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+  .ba-old .ba-navbar span{padding:6px 8px; font-size:8.5px;}
+  .ba-old .ba-main{flex-direction:column;}
+  .ba-old .ba-side{width:100%; border-right:none; border-bottom:1px solid #C9C2A5; padding:8px 10px;}
+  .ba-old .ba-side ul{display:none;}
+  .ba-old .ba-promo{margin-top:2px;}
+  .ba-old .ba-content{padding:10px 12px;}
+  .ba-old .ba-content h5{font-size:13px;}
+  .ba-old .ba-thumbs div{width:26px; height:22px;}
+  .ba-old .ba-foot{padding:6px 12px;}
+}
+@media (max-width:380px){
+  .ba-frame{height:640px;}
+}
+
+/* ============ SOBRE ============ */
+.section-head{max-width:640px; margin-bottom:56px;}
+.section-head h2{font-size:clamp(28px,3.6vw,42px); margin-top:14px;}
+.section-head p{color:var(--muted); font-size:17px; margin-top:16px;}
+.two-col{display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start;}
+@media (max-width:860px){.two-col{grid-template-columns:1fr; gap:36px;}}
+.pillars{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+@media (max-width:640px){.pillars{grid-template-columns:1fr;}}
+.pillar{padding:24px; border:1px solid var(--line); border-radius:var(--radius-m); background:#fff; transition:transform .4s var(--ease), box-shadow .4s var(--ease), border-color .4s var(--ease);}
+.pillar:hover{transform:translateY(-4px); box-shadow:var(--shadow-card-hover); border-color:transparent;}
+.pillar .num{font-family:'JetBrains Mono'; font-size:12px; color:var(--accent); font-weight:500;}
+.pillar h4{font-size:16.5px; margin-top:12px;}
+.pillar p{color:var(--muted); font-size:14.5px; margin-top:8px;}
+
+/* ============ PANEL SECTIONS ============ */
+.panel-section{background:var(--panel); border-top:1px solid var(--panel-line); border-bottom:1px solid var(--panel-line);}
+
+/* problema / solução */
+.split-cols{display:grid; grid-template-columns:1fr 1fr; gap:0; border:1px solid var(--line); border-radius:var(--radius-l); overflow:hidden; background:#fff;}
+@media (max-width:860px){.split-cols{grid-template-columns:1fr;}}
+.split-col{padding:44px 40px;}
+.split-col.problem{background:#fff;}
+.split-col.solution{background:var(--ink); color:#fff;}
+.split-col h3{font-size:22px; margin-bottom:22px;}
+.split-col.solution h3{color:#fff;}
+.check-list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:15px;}
+.check-list li{display:flex; align-items:flex-start; gap:12px; font-size:15px; color:var(--ink-soft);}
+.split-col.solution .check-list li{color:#D6D4E6;}
+.check-list svg{width:18px; height:18px; flex-shrink:0; margin-top:2px;}
+.split-col.problem svg{color:#C24545;}
+.split-col.solution svg{color:var(--accent-3);}
+@media (min-width:861px){.split-cols{grid-template-columns:1fr 1fr;}}
+
+/* ============ SERVICES ============ */
+.svc-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:var(--radius-l); overflow:hidden;}
+@media (max-width:980px){.svc-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:560px){.svc-grid{grid-template-columns:1fr;}}
+.svc-card{background:#fff; padding:32px 26px; transition:background .4s var(--ease);}
+.svc-card:hover{background:var(--accent-soft);}
+.svc-icon{width:42px; height:42px; border-radius:11px; background:var(--panel); display:flex; align-items:center; justify-content:center; margin-bottom:20px; transition:background .4s var(--ease), transform .4s var(--ease);}
+.svc-card:hover .svc-icon{background:var(--accent); transform:translateY(-2px) rotate(-4deg);}
+.svc-icon svg{width:20px; height:20px; color:var(--ink); transition:color .4s var(--ease);}
+.svc-card:hover .svc-icon svg{color:#fff;}
+.svc-card h4{font-size:16.5px; margin-bottom:8px;}
+.svc-card p{font-size:13.8px; color:var(--muted); line-height:1.55;}
+
+/* ============ DIFERENCIAIS ============ */
+.diff-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:14px;}
+@media (max-width:780px){.diff-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:480px){.diff-grid{grid-template-columns:1fr;}}
+.diff-card{display:flex; align-items:center; gap:14px; padding:20px; border:1px solid var(--line); border-radius:var(--radius-m); background:#fff;}
+.diff-card svg{width:22px; height:22px; color:var(--accent); flex-shrink:0;}
+.diff-card span{font-size:14.5px; font-weight:600;}
+
+/* ============ PROCESSO (timeline) ============ */
+.timeline{position:relative; max-width:760px;}
+.timeline::before{content:''; position:absolute; left:23px; top:6px; bottom:6px; width:1px; background:var(--line);}
+.tl-item{position:relative; padding:0 0 44px 66px;}
+.tl-item:last-child{padding-bottom:0;}
+.tl-num{
+  position:absolute; left:0; top:0; width:48px; height:48px; border-radius:50%;
+  background:#fff; border:1px solid var(--line); display:flex; align-items:center; justify-content:center;
+  font-family:'JetBrains Mono'; font-size:14px; color:var(--accent); font-weight:500;
+  transition:background .4s var(--ease), border-color .4s var(--ease), color .4s var(--ease), transform .4s var(--ease);
+}
+.tl-item.in .tl-num{background:var(--ink); border-color:var(--ink); color:#fff; transform:scale(1.06);}
+.tl-item h4{font-size:18px; margin-bottom:8px;}
+.tl-item p{color:var(--muted); font-size:14.5px; max-width:480px;}
+
+/* ============ PROJETOS ============ */
+.proj-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+@media (max-width:900px){.proj-grid{grid-template-columns:1fr 1fr;}}
+@media (max-width:600px){.proj-grid{grid-template-columns:1fr;}}
+.proj-card{
+  border-radius:var(--radius-l); overflow:hidden; border:1px solid var(--line); background:#fff;
+  transition:transform .4s var(--ease), box-shadow .4s var(--ease);
+}
+.proj-card:hover{transform:translateY(-5px); box-shadow:var(--shadow-card-hover);}
+.proj-thumb{aspect-ratio:4/3; background:linear-gradient(135deg,#EFEDFA,#E4E1F7); position:relative; overflow:hidden;}
+.proj-thumb.featured{background:linear-gradient(135deg,var(--ink),#241F45);}
+.proj-thumb .mesh{position:absolute; inset:0; background:radial-gradient(circle at 30% 30%, rgba(76,63,224,.35), transparent 60%);}
+.proj-body{padding:20px 22px;}
+.proj-body .tag{font-family:'JetBrains Mono'; font-size:11px; color:var(--accent); text-transform:uppercase; letter-spacing:.04em;}
+.proj-body h4{font-size:16px; margin-top:8px;}
+.proj-card.ghost{
+  border:1.5px dashed var(--line); background:transparent; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:10px; padding:40px 20px; text-align:center; min-height:100%;
+}
+.proj-card.ghost svg{width:26px; height:26px; color:var(--muted);}
+.proj-card.ghost span{font-size:13.5px; color:var(--muted); max-width:200px;}
+
+/* ============ TECNOLOGIAS ============ */
+.tech-cloud{display:flex; flex-wrap:wrap; gap:12px;}
+.tech-pill{
+  padding:11px 20px; border-radius:999px; border:1px solid var(--line-on-dark); background:var(--dark-panel-2);
+  color:#E4E2F2; font-size:14px; font-weight:500; display:flex; align-items:center; gap:9px;
+  transition:transform .35s var(--ease), border-color .35s var(--ease), background .35s var(--ease);
+}
+.tech-pill:hover{transform:translateY(-3px); border-color:var(--accent); background:#20203A;}
+.tech-pill .dot{width:6px; height:6px; border-radius:50%; background:var(--accent-3);}
+.tech-dark{background:var(--ink); border-radius:var(--radius-l); padding:52px 48px;}
+@media (max-width:640px){.tech-dark{padding:38px 24px;}}
+
+/* ============ FAQ ============ */
+.faq-list{max-width:760px; display:flex; flex-direction:column;}
+.faq-item{border-bottom:1px solid var(--line);}
+.faq-item summary{
+  list-style:none; cursor:pointer; padding:24px 4px; display:flex; align-items:center; justify-content:space-between; gap:20px;
+  font-family:'Bricolage Grotesque'; font-weight:600; font-size:17px;
+}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item .icon-plus{width:22px; height:22px; position:relative; flex-shrink:0;}
+.faq-item .icon-plus::before, .faq-item .icon-plus::after{content:''; position:absolute; background:var(--ink); border-radius:2px;}
+.faq-item .icon-plus::before{left:0; top:50%; width:100%; height:1.6px; transform:translateY(-50%);}
+.faq-item .icon-plus::after{top:0; left:50%; height:100%; width:1.6px; transform:translateX(-50%); transition:transform .3s var(--ease);}
+.faq-item[open] .icon-plus::after{transform:translateX(-50%) rotate(90deg); opacity:0;}
+.faq-answer{padding:0 4px 24px; color:var(--muted); font-size:15px; max-width:640px;}
+
+/* ============ CTA FINAL ============ */
+.cta-final{
+  background:var(--ink); color:#fff; border-radius:var(--radius-l); padding:80px 40px; text-align:center;
+  position:relative; overflow:hidden;
+}
+.cta-final .hero-glow{inset:-40% -10% auto -10%; height:520px; opacity:.9;}
+.cta-final h2{font-size:clamp(30px,4.4vw,52px); color:#fff; position:relative; z-index:2; max-width:760px; margin:0 auto;}
+.cta-final p{color:#B8B6C9; font-size:17px; margin:20px auto 0; max-width:540px; position:relative; z-index:2;}
+.cta-final .hero-actions{position:relative; z-index:2; margin-top:36px;}
+
+/* ============ FOOTER ============ */
+footer{padding:70px 0 34px; border-top:1px solid var(--line);}
+.footer-top{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px; padding-bottom:46px;}
+@media (max-width:780px){.footer-top{grid-template-columns:1fr 1fr; row-gap:36px;}}
+.footer-top h5{font-family:'JetBrains Mono'; font-size:12px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); margin-bottom:16px;}
+.footer-links{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:11px;}
+.footer-links a{font-size:14.5px; color:var(--ink-soft);}
+.footer-links a:hover{color:var(--accent);}
+.footer-brand p{color:var(--muted); font-size:14.5px; margin-top:14px; max-width:280px;}
+.footer-bottom{display:flex; align-items:center; justify-content:space-between; padding-top:26px; border-top:1px solid var(--line); flex-wrap:wrap; gap:12px;}
+.footer-bottom span{font-size:13px; color:var(--muted);}
+
+/* ============ FLOATING WHATSAPP ============ */
+.wa-float{
+  position:fixed; bottom:24px; right:24px; z-index:90;
+  display:flex; align-items:center; gap:10px; padding:14px 18px 14px 14px; border-radius:999px;
+  background:var(--ink); color:#fff; box-shadow:0 12px 30px -10px rgba(14,14,19,.5);
+  transition:transform .35s var(--ease), box-shadow .35s var(--ease);
+  font-size:14px; font-weight:600;
+}
+.wa-float:hover{transform:translateY(-3px) scale(1.02);}
+.wa-float .wa-ic{width:34px; height:34px; border-radius:50%; background:#25D366; display:flex; align-items:center; justify-content:center; flex-shrink:0;}
+.wa-float .wa-ic svg{width:18px; height:18px; color:#fff;}
+.wa-float .wa-text{display:flex; flex-direction:column; line-height:1.2;}
+.wa-float .wa-text small{font-weight:400; color:#B8B6C9; font-size:11px;}
+@media (max-width:560px){.wa-float .wa-text{display:none;} .wa-float{padding:14px;}}
+
+/* misc */
+.center{text-align:center; margin-left:auto; margin-right:auto;}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header id="site-header">
+  <div class="wrap nav-row">
+    <a href="#top" class="logo">
+      <img src="logo.png" alt="Vitrine Studio" width="50" height="50">
+      Vitrine Studio
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#processo">Processo</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a href="#" class="btn btn-ghost-light" style="padding:10px 18px; font-size:14px;">Nossos projetos</a>
+      <a href="#" class="btn btn-primary wa-link" data-msg="orcamento">Solicitar orçamento</a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#sobre">Sobre</a>
+  <a href="#servicos">Serviços</a>
+  <a href="#processo">Processo</a>
+  <a href="#projetos">Projetos</a>
+  <a href="#faq">FAQ</a>
+  <a href="#" class="btn btn-primary wa-link" data-msg="orcamento">Solicitar orçamento</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-grid-lines"></div>
+  <div class="hero-glow"></div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Agência de presença digital</span><br>
+    <span class="badge-founder"><span class="dot"></span>Fundada por Pedro Paravidino</span>
+    <h1 class="hero-title">Sites que fazem sua empresa parecer <span class="grad">tão boa quanto ela realmente é.</span></h1>
+    <p class="hero-sub">Transformamos a presença digital de escolas, clínicas, academias e pequenos negócios em uma experiência que passa confiança antes mesmo do primeiro contato.</p>
+    <div class="hero-actions">
+      <a href="#" class="btn btn-primary wa-link" data-msg="orcamento">
+        Solicitar orçamento
+        <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#projetos" class="btn btn-ghost-dark">Conheça nossos projetos</a>
+    </div>
+
+    <!-- signature: before/after -->
+    <div class="transform-wrap reveal">
+      <div class="transform-card">
+        <div class="ba-frame" id="ba-frame">
+          <div class="ba-layer ba-new">
+            <div class="ba-chrome">
+              <span></span><span></span><span></span>
+              <div class="ba-url"><div class="addr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 10V7a6 6 0 0112 0v3M5 10h14v10H5z"/></svg>academiavidaativa.com.br</div></div>
+            </div>
+            <div class="ba-topnav">
+              <div class="brand"><span class="mk"></span>Vida Ativa</div>
+              <div class="links"><span>Início</span><span>Estrutura</span><span>Planos</span><span>Contato</span></div>
+              <div class="cta">Matricule-se</div>
+            </div>
+            <div class="ba-hero">
+              <div class="ba-hero-text">
+                <span class="tag">ACADEMIA · DESDE 1998</span>
+                <h5>Treine com estrutura completa e acompanhamento profissional.</h5>
+                <div class="ba-lines"><span></span><span></span></div>
+                <span class="ba-btn-new">Agende uma aula grátis →</span>
+                <div class="ba-stats">
+                  <div><b>500+</b>&nbsp;alunos</div>
+                  <div><b>4.9</b>&nbsp;avaliação</div>
+                  <div><b>12</b>&nbsp;modalidades</div>
+                </div>
+              </div>
+              <div class="ba-hero-visual">
+                <div class="ba-floatcard"><span class="pulse"></span><span>32 treinando agora</span></div>
+              </div>
+            </div>
+            <div class="ba-foot">© 2026 Vida Ativa — Todos os direitos reservados</div>
+          </div>
+          <div class="ba-layer ba-old" id="ba-old" style="clip-path:inset(0 50% 0 0);">
+            <div class="ba-chrome">
+              <span></span><span></span><span></span>
+              <div class="ba-url"><div class="addr">http://www.academiavidaativa.com.br/index.html</div></div>
+            </div>
+            <div class="ba-banner">
+              <div class="brand">Academia Vida Ativa<small>Sua academia desde 1998</small></div>
+              <div class="counter">VISITAS: 004521</div>
+            </div>
+            <div class="ba-navbar"><span>HOME</span><span>A ACADEMIA</span><span>MODALIDADES</span><span>FOTOS</span><span>CONTATO</span></div>
+            <div class="ba-main">
+              <div class="ba-side">
+                <h6>Links úteis</h6>
+                <ul><li><a>Horários de aula</a></li><li><a>Nossos professores</a></li><li><a>Fale conosco</a></li></ul>
+                <div class="ba-promo"><span class="blink"></span>Promoção de verão!</div>
+              </div>
+              <div class="ba-content">
+                <h5>Bem-vindo ao nosso site!</h5>
+                <div class="updated">Atualizado em 12/03/2010</div>
+                <div class="ba-lines"><span></span><span></span><span></span></div>
+                <div class="ba-thumbs"><div></div><div></div><div></div></div>
+                <span class="ba-btn-old">clique aqui</span>
+              </div>
+            </div>
+            <div class="ba-foot">© 2010 Academia Vida Ativa - Todos os direitos reservados</div>
+          </div>
+          <span class="ba-tag old">ANTES · 2010</span>
+          <span class="ba-tag new">DEPOIS · 2026</span>
+          <div class="ba-divider" id="ba-divider"></div>
+          <div class="ba-handle" id="ba-handle">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M8 6L2 12L8 18M16 6L22 12L16 18" stroke="#0E0E13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <input type="range" min="0" max="100" value="50" class="ba-range" id="ba-range" aria-label="Comparar site antigo e novo">
+        </div>
+      </div>
+      <p class="transform-caption">Arraste para comparar — exemplo ilustrativo da distância entre perder e ganhar um cliente</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOBRE ============ -->
+<section class="section-pad" id="sobre">
+  <div class="wrap">
+    <div class="two-col">
+      <div class="reveal">
+        <span class="eyebrow">Quem somos</span>
+        <h2 style="font-size:clamp(26px,3.4vw,38px); margin-top:14px;">Não construímos páginas. Construímos a vitrine digital das empresas.</h2>
+        <p style="color:var(--muted); font-size:16px; margin-top:20px; line-height:1.7;">
+          A Vitrine nasceu com um propósito direto: dar a pequenas e médias empresas — escolas, clínicas, consultórios, academias, centros esportivos e negócios de lazer — uma presença digital à altura do trabalho que elas já fazem bem todos os dias.
+        </p>
+        <p style="color:var(--muted); font-size:16px; margin-top:16px; line-height:1.7;">
+          Fundada por Pedro Paravidino, a agência trata cada projeto como a principal ferramenta comercial do cliente — não como um item de checklist.
+        </p>
+      </div>
+      <div class="pillars reveal">
+        <div class="pillar"><span class="num">MISSÃO</span><h4>Primeira impressão extraordinária</h4><p>Garantir que o primeiro contato digital de um cliente com uma empresa seja tão sólido quanto um aperto de mão.</p></div>
+        <div class="pillar"><span class="num">VISÃO</span><h4>Padrão elevado, escala pequena</h4><p>Levar um padrão de design normalmente reservado a grandes marcas para negócios locais.</p></div>
+        <div class="pillar"><span class="num">VALORES</span><h4>Clareza acima de tudo</h4><p>Código limpo, comunicação direta e prazos que a gente cumpre — sem promessas vazias.</p></div>
+        <div class="pillar"><span class="num">FILOSOFIA</span><h4>O site é a ferramenta</h4><p>Vendemos credibilidade, autoridade e confiança. O site é apenas o meio de entregar isso.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROBLEMA / SOLUÇÃO ============ -->
+<section class="panel-section section-pad">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">O cenário</span>
+      <h2>A internet costuma ser o primeiro contato de um cliente com sua empresa</h2>
+      <p>Se essa primeira impressão falha, o resto da conversa nem começa.</p>
+    </div>
+    <div class="split-cols reveal">
+      <div class="split-col problem">
+        <h3>O problema</h3>
+        <ul class="check-list">
+          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M9 9l6 6M15 9l-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Sites antigos, lentos e visualmente ultrapassados</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M9 9l6 6M15 9l-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Páginas que quebram ou ficam ilegíveis no celular</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M9 9l6 6M15 9l-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Design que gera dúvida em vez de confiança</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M9 9l6 6M15 9l-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Baixa conversão de visitantes em contatos reais</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M9 9l6 6M15 9l-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Dependência total das redes sociais para existir online</li>
+        </ul>
+      </div>
+      <div class="split-col solution">
+        <h3>Nossa solução</h3>
+        <ul class="check-list">
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Experiências digitais modernas, rápidas e responsivas</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Mais credibilidade desde o primeiro segundo</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Caminhos claros de contato — sem fricção</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Presença digital que trabalha por você 24 horas</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Uma marca fortalecida, não só uma página online</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVIÇOS ============ -->
+<section class="section-pad" id="servicos">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">O que fazemos</span>
+      <h2>Serviços pensados para negócios que precisam de resultado, não só de estética</h2>
+    </div>
+    <div class="svc-grid reveal">
+
+  <div class="svc-card">
+    <div class="svc-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M3 9h18M3 5h18v14H3V5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <h4>Sites Institucionais</h4>
+    <p>Desenvolvemos sites modernos, rápidos e responsivos que fortalecem a credibilidade da sua empresa e facilitam o contato com novos clientes.</p>
+  </div>
+
+  <div class="svc-card">
+    <div class="svc-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M13 2L3 14h8l-1 8 11-14h-8l0-6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <h4>Landing Pages</h4>
+    <p>Páginas de alta conversão desenvolvidas para campanhas, lançamentos e geração de novos clientes.</p>
+  </div>
+
+  <div class="svc-card">
+    <div class="svc-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M21 12a9 9 0 11-6.2-8.56" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M21 5l-9 9-4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <h4>Modernização de Sites</h4>
+    <p>Transformamos sites antigos em experiências digitais modernas, rápidas e alinhadas aos padrões atuais da web.</p>
+  </div>
+
+  <div class="svc-card">
+    <div class="svc-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.6"/>
+        <path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <h4>SEO Técnico</h4>
+    <p>Estruturamos seu site para alcançar melhor desempenho no Google desde o primeiro dia.</p>
+  </div>
+
+  <div class="svc-card">
+    <div class="svc-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M12 8v4l3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/>
+      </svg>
+    </div>
+    <h4>Atualizações e Suporte</h4>
+    <p>Após a entrega do projeto, novas funcionalidades, manutenção e suporte podem ser contratados separadamente conforme a necessidade.</p>
+  </div>
+
+  <div class="svc-card">
+    <div class="svc-icon">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M12 2l3 6 6 .9-4.5 4.3 1 6-5.5-3-5.5 3 1-6L3 8.9 9 8l3-6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <h4>Consultoria Digital</h4>
+    <p>Analisamos sua presença digital e identificamos oportunidades para fortalecer sua marca e aumentar seus resultados online.</p>
+  </div>
+
+</div>
+  </div>
+</section>
+
+<!-- ============ DIFERENCIAIS ============ -->
+<section class="panel-section section-pad">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Por que a Vitrine Studio</span>
+      <h2>Detalhes que a maioria não presta atenção — e que fazem toda a diferença</h2>
+    </div>
+    <div class="diff-grid reveal">
+      <div class="diff-card"><svg viewBox="0 0 24 24" fill="none"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Código limpo</span></div>
+      <div class="diff-card"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h8l-1 8 11-14h-8l0-6z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span>Alta performance</span></div>
+      <div class="diff-card"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>SEO técnico</span></div>
+      <div class="diff-card"><svg viewBox="0 0 24 24" fill="none"><rect x="7" y="2" width="10" height="20" rx="2" stroke="currentColor" stroke-width="1.8"/></svg><span>Responsividade total</span></div>
+      <div class="diff-card"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 8v4l2.5 2.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>Acessibilidade</span></div>
+      <div class="diff-card"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span>Segurança</span></div>
+      <div class="diff-card"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/></svg><span>Design exclusivo</span></div>
+      <div class="diff-card"><svg viewBox="0 0 24 24" fill="none"><path d="M3 17l6-6 4 4 8-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Pronto para escalar</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESSO ============ -->
+<section class="section-pad" id="processo">
+  <div class="wrap">
+    <div class="two-col">
+      <div class="section-head reveal" style="margin-bottom:0;">
+        <span class="eyebrow">Como trabalhamos</span>
+        <h2>Um processo claro, do primeiro diagnóstico ao suporte contínuo</h2>
+        <p>Cada etapa existe por um motivo — nenhuma é pulada, nenhuma é genérica.</p>
+      </div>
+     <div class="timeline">
+
+    <div class="tl-item reveal">
+        <div class="tl-num">01</div>
+        <h4>Diagnóstico</h4>
+        <p>Conhecemos sua empresa, seus objetivos e identificamos oportunidades para fortalecer sua presença digital.</p>
+    </div>
+
+    <div class="tl-item reveal">
+        <div class="tl-num">02</div>
+        <h4>Planejamento</h4>
+        <p>Definimos a estrutura do projeto, funcionalidades, conteúdo e estratégia antes do início do desenvolvimento.</p>
+    </div>
+
+    <div class="tl-item reveal">
+        <div class="tl-num">03</div>
+        <h4>Design</h4>
+        <p>Desenvolvemos um layout exclusivo, alinhado à identidade da sua marca e focado na melhor experiência do usuário.</p>
+    </div>
+
+    <div class="tl-item reveal">
+        <div class="tl-num">04</div>
+        <h4>Desenvolvimento</h4>
+        <p>Transformamos o projeto em um site rápido, seguro, responsivo e otimizado para SEO.</p>
+    </div>
+
+    <div class="tl-item reveal">
+        <div class="tl-num">05</div>
+        <h4>Revisão</h4>
+        <p>Realizamos testes completos, ajustes finais e validações para garantir que tudo funcione perfeitamente.</p>
+    </div>
+
+    <div class="tl-item reveal">
+        <div class="tl-num">06</div>
+        <h4>Publicação</h4>
+        <p>Publicamos o projeto em ambiente de produção com toda a configuração necessária para desempenho, segurança e indexação.</p>
+    </div>
+
+    <div class="tl-item reveal">
+        <div class="tl-num">07</div>
+        <h4>Entrega do Projeto</h4>
+        <p>Após a aprovação final, o projeto é oficialmente entregue ao cliente. Caso sejam necessárias futuras alterações, atualizações, manutenção ou suporte, esses serviços poderão ser contratados separadamente.</p>
+    </div>
+
+</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJETOS ============ -->
+<section class="panel-section section-pad" id="projetos">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Portfólio</span>
+      <h2>Projetos em construção — o seu pode ser o próximo</h2>
+      <p>A Vitrine Studio está começando agora. Esta área foi desenhada para crescer a cada projeto entregue, com página própria para cada cliente.</p>
+    </div>
+    <div class="proj-grid reveal">
+      <div class="proj-card">
+        <div class="proj-thumb featured"><div class="mesh"></div></div>
+        <div class="proj-body"><span class="tag">Em produção</span><h4>Primeiro projeto Vitrine Studio</h4></div>
+      </div>
+      <div class="proj-card ghost">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <span>Seu projeto pode ocupar este espaço</span>
+      </div>
+      <div class="proj-card ghost">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TECNOLOGIAS ============ -->
+<section class="section-pad">
+  <div class="wrap">
+    <div class="tech-dark reveal">
+      <span class="eyebrow" style="color:#C9C4FF;">Sob o capô</span>
+      <h2 style="color:#fff; font-size:clamp(24px,3vw,34px); margin-top:14px; margin-bottom:28px;">Tecnologia moderna, sem enrolação</h2>
+      <div class="tech-cloud">
+        <span class="tech-pill"><span class="dot"></span>HTML5</span>
+        <span class="tech-pill"><span class="dot"></span>CSS3</span>
+        <span class="tech-pill"><span class="dot"></span>JavaScript</span>
+        <span class="tech-pill"><span class="dot"></span>PHP</span>
+        <span class="tech-pill"><span class="dot"></span>Node.js</span>
+        <span class="tech-pill"><span class="dot"></span>Git &amp; GitHub</span>
+        <span class="tech-pill"><span class="dot"></span>Performance web</span>
+        <span class="tech-pill"><span class="dot"></span>SEO Técnico Integrado</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section-pad" id="faq">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Dúvidas Frequentes</span>
+      <h2>Tire suas principais dúvidas antes de iniciar seu projeto.</h2>
+      <p>Reunimos as perguntas mais comuns para que você entenda como trabalhamos e o que esperar durante o desenvolvimento.</p>
+    </div>
+
+    <div class="faq-list reveal">
+
+      <details class="faq-item" open>
+        <summary>Quanto tempo leva para um site ficar pronto?<span class="icon-plus"></span></summary>
+        <div class="faq-answer">
+          O prazo varia conforme a complexidade do projeto. Em média, um site institucional é desenvolvido entre 2 e 4 semanas, incluindo planejamento, design, desenvolvimento, revisões e publicação.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Meu site atual pode ser modernizado ou preciso criar um novo?<span class="icon-plus"></span></summary>
+        <div class="faq-answer">
+          Sempre avaliamos a estrutura existente primeiro. Quando possível, modernizamos o site atual; quando a tecnologia está muito ultrapassada, recomendamos um novo desenvolvimento para garantir melhor desempenho e segurança.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>O site será responsivo?<span class="icon-plus"></span></summary>
+        <div class="faq-answer">
+          Sim. Todos os projetos são desenvolvidos para oferecer uma excelente experiência em celulares, tablets e computadores.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>O site aparecerá no Google?<span class="icon-plus"></span></summary>
+        <div class="faq-answer">
+          Todos os sites são entregues com boas práticas de SEO Técnico, incluindo estrutura otimizada, desempenho, meta tags e recursos que facilitam a indexação pelos mecanismos de busca. O posicionamento depende de diversos fatores e evolui com o tempo.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Vocês atendem empresas de qualquer região?<span class="icon-plus"></span></summary>
+        <div class="faq-answer">
+          Sim. Todo o processo pode ser realizado de forma online, com reuniões por videoconferência, WhatsApp ou e-mail.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Como funciona após a entrega do projeto?<span class="icon-plus"></span></summary>
+        <div class="faq-answer">
+          Após a aprovação final, o projeto é considerado concluído e entregue ao cliente. Caso sejam necessárias futuras alterações, novas funcionalidades, manutenção ou suporte, esses serviços poderão ser contratados separadamente.
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="section-pad">
+  <div class="wrap">
+    <div class="cta-final reveal">
+      <div class="hero-glow"></div>
+      <span class="eyebrow" style="justify-content:center; color:#C9C4FF;">Vamos conversar</span>
+      <h2 style="margin-top:16px;">Sua empresa merece uma presença digital à altura do trabalho que ela já faz.</h2>
+      <p>Fale agora com Pedro pelo WhatsApp e receba um diagnóstico inicial sem compromisso.</p>
+      <div class="hero-actions">
+        <a href="#" class="btn btn-primary wa-link" data-msg="reuniao">
+          Agendar uma conversa
+          <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="logotipocompleta.png" alt="Vitrine Studio" width="300" height="125">
+        <p>Presença digital para empresas que fazem um trabalho sério. Fundada por Pedro Paravidino.</p>
+      </div>
+      <div>
+        <h5>Navegação</h5>
+        <ul class="footer-links">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#processo">Processo</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Serviços</h5>
+        <ul class="footer-links">
+          <li><a href="#servicos">Sites institucionais</a></li>
+          <li><a href="#servicos">Landing pages</a></li>
+          <li><a href="#servicos">SEO</a></li>
+          <li><a href="#servicos">Consultoria digital</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contato</h5>
+        <ul class="footer-links">
+          <li><a href="#" class="wa-link" data-msg="orcamento">WhatsApp</a></li>
+          <li><a href="mailto:contato@vitrine.digital">contato@vitrine.digital</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Vitrine. Todos os direitos reservados.</span>
+      <span>Feito com atenção a cada detalhe.</span>
+    </div>
+  </div>
+</footer>
+
+<a href="#" class="wa-link wa-float" data-msg="orcamento">
+  <span class="wa-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-1 1-1 2.3 0 1.4 1 2.7 1.2 2.9.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.7.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-3-.2-.3A8.2 8.2 0 1112 20.2z"/></svg></span>
+  <span class="wa-text">Fale conosco<small>Respondemos rápido</small></span>
+</a>
+
+<script>
+(function(){
+  // ---- WhatsApp config ----
+  var WHATSAPP_NUMBER = "5500000000000"; // TODO: substituir pelo número real, formato 55DDDNUMERO
+  var MESSAGES = {
+    orcamento: "Olá Pedro. Gostaria de solicitar um orçamento.",
+    modernizar: "Olá Pedro. Gostaria de modernizar o site da minha empresa.",
+    reuniao: "Olá Pedro. Gostaria de agendar uma reunião."
+  };
+  document.querySelectorAll('.wa-link').forEach(function(el){
+    var key = el.getAttribute('data-msg') || 'orcamento';
+    var text = encodeURIComponent(MESSAGES[key] || MESSAGES.orcamento);
+    el.setAttribute('href', 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + text);
+    el.setAttribute('target', '_blank');
+    el.setAttribute('rel', 'noopener');
+  });
+
+  // ---- header scroll state ----
+  var header = document.getElementById('site-header');
+  var onScroll = function(){
+    if(window.scrollY > 40){ header.classList.add('scrolled'); }
+    else{ header.classList.remove('scrolled'); }
+  };
+  document.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // ---- mobile menu ----
+  var toggle = document.getElementById('menu-toggle');
+  var menu = document.getElementById('mobile-menu');
+  toggle.addEventListener('click', function(){
+    menu.classList.toggle('open');
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ menu.classList.remove('open'); });
+  });
+
+  // ---- reveal on scroll ----
+  var revealEls = document.querySelectorAll('.reveal, .tl-item');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.15, rootMargin:'0px 0px -60px 0px'});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  // ---- before/after slider ----
+  var range = document.getElementById('ba-range');
+  var oldLayer = document.getElementById('ba-old');
+  var divider = document.getElementById('ba-divider');
+  var handle = document.getElementById('ba-handle');
+  function setSplit(v){
+    oldLayer.style.clipPath = 'inset(0 ' + (100-v) + '% 0 0)';
+    divider.style.setProperty('--split', v + '%');
+    handle.style.setProperty('--split', v + '%');
+  }
+  range.addEventListener('input', function(){ setSplit(range.value); });
+  setSplit(50);
+
+  // ---- footer year ----
+  document.getElementById('year').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
